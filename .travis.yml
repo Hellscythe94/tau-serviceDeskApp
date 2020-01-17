@@ -1,4 +1,4 @@
 language: java
 script:
 - cd LAB1/serviceDeskApp; mvn test
-- cd LAB1/serviceDeskApp; mvn test
+- cd LAB2/serviceDeskApp; mvn test
