@@ -3,35 +3,36 @@ package pl.edu.pjatk.tau.serviceDeskApp.labone.data;
 import pl.edu.pjatk.tau.serviceDeskApp.labone.domain.Ticket;
 import pl.edu.pjatk.tau.serviceDeskApp.labone.service.CRUDable;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class DataBase implements CRUDable {
 
-    private Ticket[] data;
+    private ArrayList<Ticket> data;
 
     public DataBase(Ticket[] array){
-        this.data = array;
+        this.data = new ArrayList<Ticket>(Arrays.asList(array));
     }
 
 
-    public Ticket create(int id, String title, String desc, String caller) throws Exception {
+    public void create(int id, String title, String desc, String caller) throws Exception {
 
-        data[data.length] = new Ticket(id, title, desc, caller);
-
-        return null;
+        data.add(new Ticket(id, title, desc, caller));
     }
 
-    public Ticket[] readAll() {
+    public ArrayList<Ticket> readAll() {
         return data;
     }
 
     public Ticket read(int id) throws Exception {
-        return data[id];
+        return data.get(id);
     }
 
     public void update(int id, String title, String desc, String caller) throws Exception {
-        data[id] = new Ticket(id, title, desc, caller);
+        data.set(id,new Ticket(id, title, desc, caller));
     }
 
-    public void delete() {
-
+    public void delete(int id) {
+        data.remove(id);
     }
 }
