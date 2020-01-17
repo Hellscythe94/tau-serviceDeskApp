@@ -1,6 +1,6 @@
 package pl.edu.pjatk.tau.serviceDeskApp.labone.data;
 
-import pl.edu.pjatk.tau.serviceDeskApp.labone.domain.Ticket;
+import pl.edu.pjatk.tau.serviceDeskApp.labone.model.Ticket;
 import pl.edu.pjatk.tau.serviceDeskApp.labone.service.CRUDable;
 
 import java.util.ArrayList;
