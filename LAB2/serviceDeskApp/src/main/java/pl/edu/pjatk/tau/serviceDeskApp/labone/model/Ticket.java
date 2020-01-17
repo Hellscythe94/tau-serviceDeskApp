@@ -1,5 +1,7 @@
 package pl.edu.pjatk.tau.serviceDeskApp.labone.model;
 
+import java.util.Date;
+
 public class Ticket {
 
     private int id; // primary
@@ -7,13 +9,17 @@ public class Ticket {
     private String title;
     private String desc;
     private String caller;
+    private TicketDate Ticketdate = new TicketDate();
 
 
-    public Ticket(int id, String title, String desc, String caller){
+
+
+    public Ticket(int id, String title, String desc, String caller, Date creationDate){
         this.id = id;
         this.title = title;
         this.desc = desc;
         this.caller = caller;
+        Ticketdate.setCreateDate(creationDate.getTime());
     }
 
 
@@ -66,5 +72,13 @@ public class Ticket {
 
     public void setCaller(String caller) {
         this.caller = caller;
+    }
+
+    public TicketDate getTicketdate() {
+        return Ticketdate;
+    }
+
+    public void setTicketdate(TicketDate ticketdate) {
+        this.Ticketdate = ticketdate;
     }
 }
