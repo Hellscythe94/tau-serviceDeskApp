@@ -24,11 +24,11 @@ public class DataBase implements CRUDable {
     }
 
     public Ticket read(int id) throws Exception {
-        return null;
+        return data[id];
     }
 
     public void update(int id, String title, String desc, String caller) throws Exception {
-
+        data[id] = new Ticket(id, title, desc, caller);
     }
 
     public void delete() {

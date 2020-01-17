@@ -7,7 +7,7 @@ import pl.edu.pjatk.tau.serviceDeskApp.labone.domain.Ticket;
 
 import static org.junit.Assert.*;
 
-public class DataBaseTests {
+public class DataBaseTest {
 
     @Test(expected = java.lang.Exception.class)
     public void createTest() throws Exception{

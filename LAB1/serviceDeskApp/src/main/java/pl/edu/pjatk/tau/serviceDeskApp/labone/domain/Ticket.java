@@ -17,6 +17,20 @@ public class Ticket {
         this.caller = caller;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Ticket ticket = (Ticket) o;
+        return title.equals(ticket.title) &&
+                desc.equals(ticket.desc) &&
+                caller.equals(ticket.caller) &&
+                id == ticket.id;
+    }
 
     //Getters and Setters
     public int getId() {
