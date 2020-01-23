@@ -3,6 +3,7 @@ Feature: Search for regex
 
   Scenario:
     Given A database with tickets
-    And There are at least 3 of them
+    And There are at least 10 of them
     When I want to search for tickets with "Issue \d\d" in the title
     Then I should get the Expected ticket with that "Issue \d\d" in the title
+

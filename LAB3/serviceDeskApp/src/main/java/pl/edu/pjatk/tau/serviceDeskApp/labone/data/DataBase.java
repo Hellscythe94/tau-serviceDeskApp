@@ -36,6 +36,12 @@ public class DataBase implements CRUDable {
         return result;
     }
 
+    public void deleteByList(ArrayList<Integer> list) throws Exception{
+        for(int i = 0; i < list.size(); i++){
+            delete(list.get(i));
+        }
+    }
+
     public ArrayList<Ticket> readAll() {
         for (int i = 0; i < data.size(); i++) {
             data.get(i).getTicketdate().setReadDate(new Date().getTime());
@@ -54,7 +60,7 @@ public class DataBase implements CRUDable {
         data.set(id,new Ticket(id, title, desc, caller, read(id).getTicketdate().getCreateDate()));
     }
 
-    public void delete(int id) throws Exception {
-        data.remove(id);
+    public void delete(int id) {
+        data.removeIf(ticket -> ticket.getId() == id);
     }
 }

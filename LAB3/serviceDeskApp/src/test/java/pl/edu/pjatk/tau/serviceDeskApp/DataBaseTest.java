@@ -81,17 +81,6 @@ public class DataBaseTest {
         assertFalse(new Ticket(1, "1", "11", "caller1", new Date()).equals(dataBase.read(1)));
     }
 
-    @Test(expected = Exception.class)
-    public void deleteExceptionTest() throws Exception {
-        Ticket[] data = {new Ticket(0, "0", "00", "caller0", new Date()), new Ticket(1, "1", "11", "caller1", new Date()),
-                new Ticket(2, "2", "22", "caller2", new Date())};
-        DataBase dataBase = new DataBase(data);
-
-        dataBase.delete(3);
-    }
-
-
-
 
     //----------LAB2----------------
 
