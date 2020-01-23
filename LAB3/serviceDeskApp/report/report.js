@@ -1,158 +1,50 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/serviceDeskApp/is_it_friday_yet.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/serviceDeskApp/Search%20for%20regex.feature");
 formatter.feature({
-  "name": "Is it Friday yet?",
-  "description": "  Everybody wants to know when it\u0027s Friday",
+  "name": "Search for regex",
+  "description": "  User searches for a ticket Title using a regex",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "name": "Today is or is not Friday",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "today is \"\u003cday\u003e\"",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "I ask whether it\u0027s Friday yet",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "I should be told \"\u003canswer\u003e\"",
-  "keyword": "Then "
-});
-formatter.examples({
+formatter.scenario({
   "name": "",
   "description": "",
-  "keyword": "Examples",
-  "rows": [
-    {
-      "cells": [
-        "day",
-        "answer"
-      ]
-    },
-    {
-      "cells": [
-        "Friday",
-        "TGIF"
-      ]
-    },
-    {
-      "cells": [
-        "Sunday",
-        "Nope"
-      ]
-    },
-    {
-      "cells": [
-        "anything else!",
-        "Nope"
-      ]
-    }
-  ]
-});
-formatter.scenario({
-  "name": "Today is or is not Friday",
-  "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario"
 });
 formatter.step({
-  "name": "today is \"Friday\"",
+  "name": "A database with tickets",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.StepDefinitions.today_is(java.lang.String)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.aDatabaseWithTickets()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I ask whether it\u0027s Friday yet",
+  "name": "There are at least 3 of them",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.thereAreAtLeastOfThem(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I want to search for tickets with \"Issue \\d\\d\" in the title",
   "keyword": "When "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.StepDefinitions.i_ask_whether_it_s_Friday_yet()"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.iWantToSearchForTicketsWithInTheTitle(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I should be told \"TGIF\"",
+  "name": "I should get the Expected ticket with that \"Issue \\d\\d\" in the title",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.StepDefinitions.i_should_be_told(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Today is or is not Friday",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "today is \"Sunday\"",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.StepDefinitions.today_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I ask whether it\u0027s Friday yet",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.StepDefinitions.i_ask_whether_it_s_Friday_yet()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I should be told \"Nope\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.StepDefinitions.i_should_be_told(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Today is or is not Friday",
-  "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "today is \"anything else!\"",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.StepDefinitions.today_is(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I ask whether it\u0027s Friday yet",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.StepDefinitions.i_ask_whether_it_s_Friday_yet()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I should be told \"Nope\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.StepDefinitions.i_should_be_told(java.lang.String)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.iShouldGetTheExpectedTicketWithThatInTheTitle(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

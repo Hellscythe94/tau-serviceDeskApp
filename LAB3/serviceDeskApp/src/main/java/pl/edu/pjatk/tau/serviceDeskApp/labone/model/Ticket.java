@@ -22,6 +22,8 @@ public class Ticket {
         Ticketdate.setCreateDate(creationDate.getTime());
     }
 
+    public Ticket(){ }
+
 
 
     //-------------METHODS--------------

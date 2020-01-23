@@ -11,9 +11,6 @@ public class TicketDate {
     public TicketDate() {
     }
 
-    //-------METHODS------------
-
-
     //-------- getters and setters -----------
 
 

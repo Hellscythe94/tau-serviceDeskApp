@@ -6,6 +6,8 @@ import pl.edu.pjatk.tau.serviceDeskApp.labone.service.CRUDable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class DataBase implements CRUDable {
 
@@ -19,6 +21,19 @@ public class DataBase implements CRUDable {
     public void create(int id, String title, String desc, String caller) throws Exception {
 
         data.add(new Ticket(id, title, desc, caller, new Date()));
+    }
+
+    public Ticket findTicketByTitle(String regex){
+
+        Pattern pattern = Pattern.compile(regex);
+        Ticket result = new Ticket();
+
+        for (Ticket ticket : data) {
+            Matcher matcher = pattern.matcher(ticket.getTitle());
+            if(matcher.find()) result =  ticket;
+        }
+
+        return result;
     }
 
     public ArrayList<Ticket> readAll() {
