@@ -68,7 +68,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.aDatabaseWithTickets()"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.aDatabaseWithTickets()"
 });
 formatter.result({
   "status": "passed"
@@ -78,7 +78,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.thereAreAtLeastOfThem(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.thereAreAtLeastOfThem(int)"
 });
 formatter.result({
   "status": "passed"
@@ -93,7 +93,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.aListOfIDs(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.aListOfIDs(int)"
 });
 formatter.result({
   "status": "passed"
@@ -103,7 +103,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.iWantToDeleteTicketsToDeleteRecordsFromThe()"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.iWantToDeleteTicketsToDeleteRecordsFromThe()"
 });
 formatter.result({
   "status": "passed"
@@ -113,7 +113,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.theSizeShouldBeFewerByTheTicketsToDelete(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.theSizeShouldBeFewerByTheTicketsToDelete(int)"
 });
 formatter.result({
   "status": "passed"
@@ -128,7 +128,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.aDatabaseWithTickets()"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.aDatabaseWithTickets()"
 });
 formatter.result({
   "status": "passed"
@@ -138,7 +138,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.thereAreAtLeastOfThem(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.thereAreAtLeastOfThem(int)"
 });
 formatter.result({
   "status": "passed"
@@ -153,7 +153,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.aListOfIDs(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.aListOfIDs(int)"
 });
 formatter.result({
   "status": "passed"
@@ -163,7 +163,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.iWantToDeleteTicketsToDeleteRecordsFromThe()"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.iWantToDeleteTicketsToDeleteRecordsFromThe()"
 });
 formatter.result({
   "status": "passed"
@@ -173,7 +173,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.theSizeShouldBeFewerByTheTicketsToDelete(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.theSizeShouldBeFewerByTheTicketsToDelete(int)"
 });
 formatter.result({
   "status": "passed"
@@ -188,7 +188,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.aDatabaseWithTickets()"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.aDatabaseWithTickets()"
 });
 formatter.result({
   "status": "passed"
@@ -198,7 +198,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.thereAreAtLeastOfThem(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.thereAreAtLeastOfThem(int)"
 });
 formatter.result({
   "status": "passed"
@@ -213,7 +213,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.aListOfIDs(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.aListOfIDs(int)"
 });
 formatter.result({
   "status": "passed"
@@ -223,7 +223,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.iWantToDeleteTicketsToDeleteRecordsFromThe()"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.iWantToDeleteTicketsToDeleteRecordsFromThe()"
 });
 formatter.result({
   "status": "passed"
@@ -233,7 +233,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.theSizeShouldBeFewerByTheTicketsToDelete(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.theSizeShouldBeFewerByTheTicketsToDelete(int)"
 });
 formatter.result({
   "status": "passed"
@@ -248,7 +248,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.aDatabaseWithTickets()"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.aDatabaseWithTickets()"
 });
 formatter.result({
   "status": "passed"
@@ -258,7 +258,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.thereAreAtLeastOfThem(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.thereAreAtLeastOfThem(int)"
 });
 formatter.result({
   "status": "passed"
@@ -273,7 +273,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.aListOfIDs(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.aListOfIDs(int)"
 });
 formatter.result({
   "status": "passed"
@@ -283,7 +283,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.iWantToDeleteTicketsToDeleteRecordsFromThe()"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.iWantToDeleteTicketsToDeleteRecordsFromThe()"
 });
 formatter.result({
   "status": "passed"
@@ -293,7 +293,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.theSizeShouldBeFewerByTheTicketsToDelete(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.theSizeShouldBeFewerByTheTicketsToDelete(int)"
 });
 formatter.result({
   "status": "passed"
@@ -314,7 +314,7 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.aDatabaseWithTickets()"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.aDatabaseWithTickets()"
 });
 formatter.result({
   "status": "passed"
@@ -324,7 +324,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.thereAreAtLeastOfThem(int)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.thereAreAtLeastOfThem(int)"
 });
 formatter.result({
   "status": "passed"
@@ -334,7 +334,7 @@ formatter.step({
   "keyword": "When "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.iWantToSearchForTicketsWithInTheTitle(java.lang.String)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.iWantToSearchForTicketsWithInTheTitle(java.lang.String)"
 });
 formatter.result({
   "status": "passed"
@@ -344,7 +344,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "pl.edu.pjatk.tau.serviceDeskApp.RegexStepdefs.iShouldGetTheExpectedTicketWithThatInTheTitle(java.lang.String)"
+  "location": "pl.edu.pjatk.tau.serviceDeskApp.CucumberStepdefs.iShouldGetTheExpectedTicketWithThatInTheTitle(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

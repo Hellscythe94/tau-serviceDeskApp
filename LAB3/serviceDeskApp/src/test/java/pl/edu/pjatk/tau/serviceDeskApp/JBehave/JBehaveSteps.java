@@ -1,29 +1,25 @@
-package pl.edu.pjatk.tau.serviceDeskApp;
+package pl.edu.pjatk.tau.serviceDeskApp.JBehave;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import org.jbehave.core.annotations.Given;
+import org.jbehave.core.annotations.Then;
+import org.jbehave.core.annotations.When;
 import pl.edu.pjatk.tau.serviceDeskApp.labone.data.DataBase;
 import pl.edu.pjatk.tau.serviceDeskApp.labone.model.Ticket;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
 
-public class RegexStepdefs {
+public class JBehaveSteps {
 
     private DataBase dataBase = new DataBase(new Ticket[]{});
     private Ticket searchedTicketByTitle;
     private ArrayList<Integer> IDs;
     private int ticketsToDelete;
 
-    @Given("A database with tickets")
-    public void aDatabaseWithTickets() {
+    @Given("A database with $amount tickets")
+    public void aDatabaseWithTickets(int amount){
         Ticket[] data = {
                 new Ticket(0, "Issue 10 - Monitor problem", "00", "caller0", new Date()),
                 new Ticket(1, "Request 11 - monitor", "11", "caller1", new Date()),
@@ -36,30 +32,23 @@ public class RegexStepdefs {
                 new Ticket(8, "Issue 18 - mouse problem", "88", "caller8", new Date()),
                 new Ticket(9, "Request 19 - monitor purchase", "99", "caller9", new Date())};
         dataBase = new DataBase(data);
+
+        assertEquals(amount, dataBase.readAll().size());
     }
 
-    @And("There are at least {int} of them")
-    public void thereAreAtLeastOfThem(int arg0) throws Exception {
-        assertEquals(dataBase.readAll().size(), arg0);
+    @When("I want to search for tickets with $phrase in the title")
+    public void iWantToSearchForTicketsWithInTheTitle(String phrase){
+        searchedTicketByTitle = dataBase.findTicketByTitle(phrase);
     }
 
-    //Regex feature//
-
-    @When("I want to search for tickets with {string} in the title")
-    public void iWantToSearchForTicketsWithInTheTitle(String arg0) {
-        searchedTicketByTitle = dataBase.findTicketByTitle("Issue\\s\\d\\d");
-    }
-
-    @Then("I should get the Expected ticket with that {string} in the title")
-    public void iShouldGetTheExpectedTicketWithThatInTheTitle(String arg0) throws Exception{
+    @Then("I should get the Expected ticket with that regex match in the title")
+    public void iShouldGetTheExpectedTicketWithThatInTheTitle() throws Exception{
         assertEquals(searchedTicketByTitle.getTitle(), dataBase.read(8).getTitle());
     }
 
-    // Delete by list feature//
-
-    @Given("A list of {int} IDs")
+    @Given("A list of $ticketsToDelete IDs")
     public void aListOfIDs(int ticketsToDelete) {
-        IDs = new ArrayList<Integer>();
+        IDs = new ArrayList<>();
 
         this.ticketsToDelete = ticketsToDelete;
 
@@ -73,8 +62,9 @@ public class RegexStepdefs {
         dataBase.deleteByList(IDs);
     }
 
-    @Then("The size of the database should be {int}")
+    @Then("The size of the database should be $size")
     public void theSizeShouldBeFewerByTheTicketsToDelete(int size) {
         assertEquals(10-ticketsToDelete, size);
     }
 }
+
